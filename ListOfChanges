@@ -1,13 +1,4 @@
-## stb6100.c :
-                             : correct lkup[] table
-                             : set stb6100_regs[] registers global 
-stb6100_read_reg             : correct single register read
-stb6100_write_reg            : suppress
-stb6100_set_bandwidth        : write via stb6100_write_reg_range and global registers
-stb6100_set_frequency        : modify BB gain values, according to Technotrend driver
-                               write via stb6100_write_reg_range and global registers according datashhet and TT driver,
-                                 otherwise demod core goes out of bounds for low c/n or low RF level, 
-                                 corrects also read estim C/N in stb0899_read_snr
-                               add 1 step ripped from TT
-                               add lock detect at end
-
+## lnbp21.c :
+                           
+lnbp21_set_voltage           : case SEC_VOLTAGE_OFF: can't break here, need minimum voltage to make diseqc switch setup time to operate
+                               case SEC_VOLTAGE_13 & SEC_VOLTAGE_18: force high voltage
