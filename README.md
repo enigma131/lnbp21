@@ -30,8 +30,8 @@ Compile source / Install DKMS:
 
 Verify result :
 
-    dkms status
+    sudo dkms status
 
-    modinfo lnbp21
+    sudo modinfo lnbp21
 
 Reboot and test
