@@ -177,8 +177,9 @@ struct dvb_frontend *lnbp21_attach(struct dvb_frontend *fe,
 	return lnbx2x_attach(fe, i2c, override_set, override_clear,
 							0x08, LNBP21_ISEL);
 }
-EXPORT_SYMBOL(lnbp21_attach);
-
+// modification for kernels from and icluding: 6.1.53, 5.15.132, 5.4.257...
+EXPORT_SYMBOL_GPL(lnbp21_attach);
+// EXPORT_SYMBOL(lnbp21_attach);
 MODULE_DESCRIPTION("Driver for lnb supply and control ic lnbp21, lnbh24");
 MODULE_AUTHOR("Oliver Endriss, Igor M. Liplianin, Enigma13");
 MODULE_LICENSE("GPL");
